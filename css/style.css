@@ -1,0 +1,85 @@
+.hide{
+    visibility: hidden;
+}
+
+.buttons-wrapper {
+    text-align: center;
+}
+
+button {
+    margin: 40px 80px;
+    padding: 20px;
+    background: lightsalmon;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+.layout-1 {
+    max-width: 800px;
+    display: grid; 
+     grid-template-areas: 
+      "header header header"
+      "nav article ads"
+      "footer footer footer";
+    grid-template-rows: 60px 1fr 60px;
+    grid-template-columns: 20% 1fr 15%;
+    grid-gap: 10px;
+    height: 50vh;
+    margin: 30px auto;
+    padding: 10px;
+    }
+
+.layout-2 {
+    max-width: 800px;
+    display: grid;
+    grid-template-areas: 
+  "nav header header"
+  "nav article ads"
+  "nav footer ads";
+  grid-template-rows: 60px 1fr 60px;
+    grid-template-columns: 20% 1fr 15%;
+    grid-gap: 10px;
+    height: 50vh;
+    margin: 30px auto;
+    padding: 10px;
+    position: relative;
+    top: -535px;
+}
+
+.layout-3 {
+    max-width: 800px;
+    display: grid;
+    grid-template-areas: 
+  "header header header"
+  "article nav ads"
+  "footer footer footer";
+  grid-template-rows: 60px 1fr 60px;
+    grid-template-columns: 1fr 20% 15%;
+    grid-gap: 10px;
+    height: 50vh;
+    margin: 30px auto;
+    padding: 10px;
+    position: relative;
+    top: -1070px;
+}
+
+  header, footer, article, nav, #siteAds {
+    padding: 20px;
+    background: gold;
+  }
+
+  #pageHeader {
+    grid-area: header;
+  }
+  #pageFooter {
+    grid-area: footer;
+  }
+  #mainArticle { 
+    grid-area: article;      
+    }
+  #mainNav { 
+    grid-area: nav; 
+    }
+  #siteAds { 
+    grid-area: ads; 
+    }
