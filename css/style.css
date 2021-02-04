@@ -1,4 +1,4 @@
-.hide{
+.hide {
     visibility: hidden;
 }
 
@@ -14,72 +14,68 @@ button {
     border: 1px solid grey;
 }
 
-.layout-1 {
+.grid {
     max-width: 800px;
-    display: grid; 
-     grid-template-areas: 
-      "header header header"
-      "nav article ads"
-      "footer footer footer";
+    display: grid;
     grid-template-rows: 60px 1fr 60px;
     grid-template-columns: 20% 1fr 15%;
     grid-gap: 10px;
     height: 50vh;
     margin: 30px auto;
     padding: 10px;
-    }
+}
+
+.layout-1 {
+    grid-template-areas: "header header header" "nav article ads" "footer footer footer";
+}
 
 .layout-2 {
-    max-width: 800px;
-    display: grid;
-    grid-template-areas: 
-  "nav header header"
-  "nav article ads"
-  "nav footer ads";
-  grid-template-rows: 60px 1fr 60px;
-    grid-template-columns: 20% 1fr 15%;
-    grid-gap: 10px;
-    height: 50vh;
-    margin: 30px auto;
-    padding: 10px;
+    grid-template-areas: "nav header header" "nav article ads" "nav footer ads";
     position: relative;
     top: -535px;
 }
 
 .layout-3 {
-    max-width: 800px;
-    display: grid;
-    grid-template-areas: 
-  "header header header"
-  "article nav ads"
-  "footer footer footer";
-  grid-template-rows: 60px 1fr 60px;
+    grid-template-areas: "header header header" "article nav ads" "footer footer footer";
     grid-template-columns: 1fr 20% 15%;
-    grid-gap: 10px;
-    height: 50vh;
-    margin: 30px auto;
-    padding: 10px;
     position: relative;
     top: -1070px;
 }
 
-  header, footer, article, nav, #siteAds {
+header, footer, article, nav, #siteAds {
     padding: 20px;
     background: gold;
-  }
+}
 
-  #pageHeader {
+#pageHeader {
     grid-area: header;
-  }
-  #pageFooter {
+}
+
+#pageFooter {
     grid-area: footer;
+}
+
+#mainArticle {
+    grid-area: article;
+}
+
+#mainNav {
+    grid-area: nav;
+}
+
+#siteAds {
+    grid-area: ads;
+}
+
+@media all and (max-width: 575px) {
+    .grid { 
+      grid-template-areas: 
+        "header"
+        "article"
+        "ads"
+        "nav"
+        "footer";
+      grid-template-rows: 80px 1fr 70px 1fr 70px;  
+      grid-template-columns: 1fr;
+   }
   }
-  #mainArticle { 
-    grid-area: article;      
-    }
-  #mainNav { 
-    grid-area: nav; 
-    }
-  #siteAds { 
-    grid-area: ads; 
-    }
